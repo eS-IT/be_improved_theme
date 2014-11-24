@@ -89,11 +89,11 @@ class BackendImprovedTheme extends Backend
 	public function __construct()
 	{
 		# fix Ticket #10 see https://github.com/netzmacht/be_improved_theme/issues/10
-        if(!substr_count(\Environment::get('requestUri'), '/contao/install.php'))
-        {
-            parent::__construct();
-            $this->import('BackendUser', 'User');
-        }
+		if(!substr_count(\Environment::get('requestUri'), '/contao/install.php'))
+		{
+			parent::__construct();
+			$this->import('BackendUser', 'User');
+		}
         
 		$this->objCombiner = new Combiner();
 		
